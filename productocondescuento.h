@@ -7,12 +7,12 @@
 class ProductoConDescuento : public Producto
 {
 public:
-    ProductoConDescuento(const std::string& nombre, double precio, const std::string& descripcion, double discount)
-        : Producto(nombre, precio, descripcion), descuento(discount) {}
+    ProductoConDescuento(const std::string& nombre, double precio, const std::string& descripcion, double descuento)
+        : Producto(nombre, precio, descripcion), descuento(descuento) {}
 
     double calcularValorTotal() const override{
-        double precio=Producto::calcularValorTotal();
-        return precio * (descuento / 100);
+
+        return precio * (1- descuento / 100)*cantidad;
     }
 
     std::string mostrarInformacion()  {
@@ -21,6 +21,7 @@ public:
 
 private:
     double descuento;
+    int cantidad;
 };
 
 #endif // PRODUCTOCONDESCUENTO_H

@@ -52,10 +52,12 @@ public:
     QWidget *tab_3;
     QLineEdit *lE_nameElim;
     QPushButton *btn_eliminar;
+    QLabel *label_8;
     QWidget *tab_4;
     QTextEdit *tE_mostrar;
     QTextEdit *tE_calcInventario;
     QPushButton *btn_mostrar;
+    QLabel *label_9;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -106,6 +108,7 @@ public:
         lE_descripcion = new QLineEdit(tab_2);
         lE_descripcion->setObjectName("lE_descripcion");
         lE_descripcion->setGeometry(QRect(490, 140, 231, 221));
+        lE_descripcion->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
         label_3 = new QLabel(tab_2);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(490, 90, 211, 41));
@@ -150,12 +153,17 @@ public:
         btn_eliminar = new QPushButton(tab_3);
         btn_eliminar->setObjectName("btn_eliminar");
         btn_eliminar->setGeometry(QRect(300, 190, 171, 51));
+        label_8 = new QLabel(tab_3);
+        label_8->setObjectName("label_8");
+        label_8->setGeometry(QRect(200, 20, 321, 51));
+        label_8->setFont(font2);
+        label_8->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tabWidget->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName("tab_4");
         tE_mostrar = new QTextEdit(tab_4);
         tE_mostrar->setObjectName("tE_mostrar");
-        tE_mostrar->setGeometry(QRect(130, 40, 481, 311));
+        tE_mostrar->setGeometry(QRect(130, 100, 481, 251));
         tE_mostrar->setReadOnly(true);
         tE_calcInventario = new QTextEdit(tab_4);
         tE_calcInventario->setObjectName("tE_calcInventario");
@@ -163,6 +171,11 @@ public:
         btn_mostrar = new QPushButton(tab_4);
         btn_mostrar->setObjectName("btn_mostrar");
         btn_mostrar->setGeometry(QRect(340, 430, 83, 29));
+        label_9 = new QLabel(tab_4);
+        label_9->setObjectName("label_9");
+        label_9->setGeometry(QRect(220, 20, 321, 51));
+        label_9->setFont(font2);
+        label_9->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tabWidget->addTab(tab_4, QString());
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -175,7 +188,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -199,8 +212,10 @@ public:
         label_7->setText(QCoreApplication::translate("MainWindow", "Agregar Producto", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
         btn_eliminar->setText(QCoreApplication::translate("MainWindow", "Eliminar", nullptr));
+        label_8->setText(QCoreApplication::translate("MainWindow", "Eliminar Producto", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Page", nullptr));
         btn_mostrar->setText(QCoreApplication::translate("MainWindow", "Mostrar", nullptr));
+        label_9->setText(QCoreApplication::translate("MainWindow", "Mostrar Inventario", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Page", nullptr));
     } // retranslateUi
 
