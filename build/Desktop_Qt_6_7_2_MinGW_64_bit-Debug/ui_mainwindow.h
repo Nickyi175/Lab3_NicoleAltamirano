@@ -53,11 +53,13 @@ public:
     QLineEdit *lE_nameElim;
     QPushButton *btn_eliminar;
     QLabel *label_8;
+    QLabel *label_11;
     QWidget *tab_4;
     QTextEdit *tE_mostrar;
     QTextEdit *tE_calcInventario;
     QPushButton *btn_mostrar;
     QLabel *label_9;
+    QLabel *label_10;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -149,21 +151,25 @@ public:
         tab_3->setObjectName("tab_3");
         lE_nameElim = new QLineEdit(tab_3);
         lE_nameElim->setObjectName("lE_nameElim");
-        lE_nameElim->setGeometry(QRect(170, 100, 401, 51));
+        lE_nameElim->setGeometry(QRect(180, 210, 401, 51));
         btn_eliminar = new QPushButton(tab_3);
         btn_eliminar->setObjectName("btn_eliminar");
-        btn_eliminar->setGeometry(QRect(300, 190, 171, 51));
+        btn_eliminar->setGeometry(QRect(300, 280, 171, 51));
         label_8 = new QLabel(tab_3);
         label_8->setObjectName("label_8");
-        label_8->setGeometry(QRect(200, 20, 321, 51));
+        label_8->setGeometry(QRect(220, 50, 321, 51));
         label_8->setFont(font2);
         label_8->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_11 = new QLabel(tab_3);
+        label_11->setObjectName("label_11");
+        label_11->setGeometry(QRect(170, 130, 451, 41));
+        label_11->setFont(font1);
         tabWidget->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName("tab_4");
         tE_mostrar = new QTextEdit(tab_4);
         tE_mostrar->setObjectName("tE_mostrar");
-        tE_mostrar->setGeometry(QRect(130, 100, 481, 251));
+        tE_mostrar->setGeometry(QRect(130, 80, 481, 221));
         tE_mostrar->setReadOnly(true);
         tE_calcInventario = new QTextEdit(tab_4);
         tE_calcInventario->setObjectName("tE_calcInventario");
@@ -176,6 +182,10 @@ public:
         label_9->setGeometry(QRect(220, 20, 321, 51));
         label_9->setFont(font2);
         label_9->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_10 = new QLabel(tab_4);
+        label_10->setObjectName("label_10");
+        label_10->setGeometry(QRect(130, 320, 171, 41));
+        label_10->setFont(font1);
         tabWidget->addTab(tab_4, QString());
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -188,7 +198,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -202,7 +212,7 @@ public:
         btn_mostrarMenu->setText(QCoreApplication::translate("MainWindow", "Mostrar Producto", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "MENU", nullptr));
         btn_salir->setText(QCoreApplication::translate("MainWindow", "Salir", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Menu", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Nombre del Producto:", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Descripci\303\263n:", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Precio unitario:", nullptr));
@@ -210,13 +220,15 @@ public:
         label_6->setText(QCoreApplication::translate("MainWindow", "Cantidad:", nullptr));
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "Agregar", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Agregar Producto", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Agregar", nullptr));
         btn_eliminar->setText(QCoreApplication::translate("MainWindow", "Eliminar", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "Eliminar Producto", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Page", nullptr));
+        label_11->setText(QCoreApplication::translate("MainWindow", "Ingrese el nombre del producto que desea eliminar:", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Eliminar", nullptr));
         btn_mostrar->setText(QCoreApplication::translate("MainWindow", "Mostrar", nullptr));
         label_9->setText(QCoreApplication::translate("MainWindow", "Mostrar Inventario", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Page", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", "Total Inventario", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Mostrar", nullptr));
     } // retranslateUi
 
 };

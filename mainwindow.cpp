@@ -42,7 +42,6 @@ void MainWindow::on_pushButton_4_clicked()
 
     if (cantidad > 0) {
         inventario.agregarProducto(new ProductoConStock(nombre.toStdString(), precio, descripcion.toStdString(), cantidad));
-        qDebug()<<descripcion;
     } else if (descuento > 0) {
         inventario.agregarProducto(new ProductoConDescuento(nombre.toStdString(), precio, descripcion.toStdString(), descuento));
     } else {

@@ -24,11 +24,11 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
-      <string>Tab 1</string>
+      <string>Menu</string>
      </attribute>
      <widget class="QPushButton" name="btn_agregarMenu">
       <property name="geometry">
@@ -107,7 +107,7 @@
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Tab 2</string>
+      <string>Agregar</string>
      </attribute>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
@@ -289,13 +289,13 @@
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
-      <string>Page</string>
+      <string>Eliminar</string>
      </attribute>
      <widget class="QLineEdit" name="lE_nameElim">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>100</y>
+        <x>180</x>
+        <y>210</y>
         <width>401</width>
         <height>51</height>
        </rect>
@@ -305,7 +305,7 @@
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>190</y>
+        <y>280</y>
         <width>171</width>
         <height>51</height>
        </rect>
@@ -317,8 +317,8 @@
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>20</y>
+        <x>220</x>
+        <y>50</y>
         <width>321</width>
         <height>51</height>
        </rect>
@@ -335,18 +335,36 @@
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>130</y>
+        <width>451</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ingrese el nombre del producto que desea eliminar:</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
-      <string>Page</string>
+      <string>Mostrar</string>
      </attribute>
      <widget class="QTextEdit" name="tE_mostrar">
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>100</y>
+        <y>80</y>
         <width>481</width>
-        <height>251</height>
+        <height>221</height>
        </rect>
       </property>
       <property name="readOnly">
@@ -395,6 +413,24 @@
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>320</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Total Inventario</string>
       </property>
      </widget>
     </widget>
